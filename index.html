@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head bac>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./CSS/style.css" />
+        <link
+            rel="shortcut icon"
+            href="./favicon/favicon.png"
+            type="image/x-icon"
+        />
+        <title>profit or loss</title>
+    </head>
+    <body>
+        <main class="container">
+            <header><h1>Check Profit / Loss on your Stock</h1></header>
+            <div class="output">
+                <img src="./images/welcome.png" alt="welcome" id="img" />
+                <!-- <img src="./images/profit.jpg" alt="profit"> -->
+                <!-- <img src="./images/loss.jpg" alt="loss"> -->
+                <!-- <img src="./images/error.jpg" alt="error"> -->
+                <div class="message">
+                    Welcome!! Fill in the fields below and I'll let you know be
+                    it profit or loss.
+                </div>
+            </div>
+            <div class="input">
+                <label for="purchase-price">Purchase Price</label>
+                <input
+                    type="number"
+                    name="purchase-price"
+                    id="purchase-price"
+                />
+                <label for="stock-quantity">Stock Quantity</label>
+                <input
+                    type="number"
+                    name="stock-quantity"
+                    id="stock-quantity"
+                    disabled
+                /><label for="current-price">Current Price</label>
+                <input
+                    type="number"
+                    name="current-price"
+                    id="current-price"
+                    disabled
+                />
+                <button class="btn">CHECK</button>
+            </div>
+        </main>
+        <script src="./js/main.js"></script>
+    </body>
+</html>

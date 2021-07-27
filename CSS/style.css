@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    --dark-color: #533f27;
+    --light-color: #a9c9ba;
+    --pink-color: #eb7d86;
+    --radius: 20px;
+}
+
+.container {
+    background: var(--dark-color);
+    color: var(--pink-color);
+    border-radius: var(--radius);
+    max-width: 850px;
+    height: max-content;
+    text-align: center;
+    margin: 50px auto;
+    padding: 50px 0px;
+}
+
+.container > header > h1 {
+    margin-bottom: 50px;
+}
+
+.container > .output > .message {
+    font-size: 30px;
+    margin: 30px;
+    border-radius: var(--radius);
+    background: #ffffff41;
+}
+
+.container > .output {
+    background: var(--light-color);
+    color: var(--dark-color);
+    border-radius: var(--radius);
+    margin: 0px auto;
+    padding: 20px;
+    max-width: 800px;
+}
+
+.container > .output > img {
+    max-width: 300px;
+}
+
+.container > .input > * {
+    display: block;
+    margin: 30px auto;
+}
+
+.input input {
+    border: 2px solid var(--pink-color);
+    border-radius: var(--radius);
+    width: 300px;
+    padding: 10px;
+}
+
+.input label {
+    font-size: 20px;
+}
+
+.input input:focus-visible {
+    outline: none;
+    border: 2px solid var(--light-color);
+}
+
+.input .btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--pink-color);
+    color: #ffffff;
+    border-radius: var(--radius);
+    border: none;
+}
+
+.input .btn:active {
+    background: var(--light-color);
+    color: var(--dark-color);
+}
