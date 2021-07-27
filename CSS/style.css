@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    user-select: none;
     --dark-color: #533f27;
     --light-color: #a9c9ba;
     --pink-color: #eb7d86;
