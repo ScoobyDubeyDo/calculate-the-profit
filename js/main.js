@@ -6,23 +6,49 @@ let image = document.querySelector("#img");
 let msg = document.querySelector(".message");
 
 button.addEventListener("click", () => {
-    // console.log(quantity.value);
-    // console.log(current.value);
-    // current.disabled = false;
-    blank(purchase);
+    calculate(purchase, quantity, current);
 });
 
-function blank(field) {
-    if (field.value > 0) {
-        if (field.id == "purchase-price") {
-            console.log(purchase.value);
-        } else if (condition) {
-        } else if (condition) {
-        } else {
+function calculate(pp, sq, cp) {
+    if (
+        parseInt(pp.value) > 0 &&
+        parseInt(sq.value) > 0 &&
+        parseInt(cp.value) > 0
+    ) {
+        if (parseInt(cp.value) < parseInt(pp.value)) {
+            let lossAmt, lossPer;
+            lossAmt =
+                (parseInt(pp.value) - parseInt(cp.value)) * parseInt(sq.value);
+            lossPer =
+                ((parseInt(pp.value) - parseInt(cp.value)) * 100) /
+                parseInt(pp.value);
+            image.src = "./images/loss.jpg";
+            msg.innerText = `You lost  ${lossPer.toFixed(
+                2
+            )}%. Your total loss is ₹${lossAmt}.`;
+        } else if (parseInt(cp.value) > parseInt(pp.value)) {
+            let profitAmt, profitPer;
+            profitAmt =
+                (parseInt(cp.value) - parseInt(pp.value)) * parseInt(sq.value);
+            profitPer =
+                ((parseInt(cp.value) - parseInt(pp.value)) * 100) /
+                parseInt(pp.value);
+            image.src = "./images/profit.jpg";
+            msg.innerText = `You gained ${profitPer.toFixed(
+                2
+            )}%. Your total profit is ₹${profitAmt}.`;
         }
-    } else {
+    } else if (pp.value === "" || sq.value === "" || cp.value === "") {
         image.src = "./images/error.jpg";
         msg.innerText =
-            "Please do not leave the field blank. Enter at least one positive number.";
+            "Please do not leave the fields blank. Enter at least one positive number.";
+    } else if (
+        parseInt(pp.value) < 0 ||
+        parseInt(sq.value) < 0 ||
+        parseInt(cp.value) < 0
+    ) {
+        image.src = "./images/error.jpg";
+        msg.innerText =
+            "Please enter a positive number, values below 0 are not accepted.";
     }
 }
