@@ -66,22 +66,16 @@
     border: 2px solid var(--light-color);
 }
 
-.input .btn,
-.up {
+.input > a > .btn {
     padding: 10px 30px;
     cursor: pointer;
     background: var(--pink-color);
-    color: #ffffff;
     border-radius: var(--radius);
+    color: #ffffff;
     border: none;
 }
-.up {
-    padding: 10px;
-    text-decoration: unset;
-    background: var(--light-color);
-}
-.input .btn:active,
-.up:active {
+
+.input .btn:active {
     background: var(--light-color);
     color: var(--dark-color);
 }
