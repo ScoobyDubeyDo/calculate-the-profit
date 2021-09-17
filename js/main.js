@@ -15,7 +15,11 @@ function calculate(pp, sq, cp) {
         parseInt(sq.value) > 0 &&
         parseInt(cp.value) > 0
     ) {
-        if (parseInt(cp.value) < parseInt(pp.value)) {
+        if (pp.value === cp.value) {
+            image.src = "./images/error.jpg";
+            msg.innerText =
+                "Even Steven";
+        } else if (parseInt(cp.value) < parseInt(pp.value)) {
             let lossAmt, lossPer;
             lossAmt =
                 (parseInt(pp.value) - parseInt(cp.value)) * parseInt(sq.value);
